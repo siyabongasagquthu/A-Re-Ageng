@@ -1,46 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- Character encoding -->
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
 
-    <!-- Makes the page responsive -->
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page description -->
+    <!-- SEO Description -->
     <meta name="description"
-        content="Send an enquiry to A Re Ageng Social Services about services, programmes and volunteering.">
+        content="Make an enquiry with A Re Ageng Social Services about social support, family assistance, youth development, community programmes and volunteering in South Africa.">
 
-    <!-- Page title -->
-    <title>A Re Ageng Social Services | Enquiry</title>
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="A Re Ageng enquiries, social support, family support, youth development, community programmes, volunteering">
+
+    <!-- Author -->
+    <meta name="author" content="A Re Ageng Social Services">
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="Make an Enquiry | A Re Ageng Social Services">
+
+    <meta property="og:description"
+        content="Contact A Re Ageng Social Services about our community services and programmes.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Page Title -->
+    <title>Make an Enquiry | A Re Ageng Social Services</title>
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
+    <!-- HEADER -->
     <header>
 
         <h1>A Re Ageng Social Services</h1>
 
         <p>Building Stronger Communities Together</p>
 
-
-        <!-- =================================================
-             NAVIGATION MENU
-             ================================================= -->
-
-        <nav>
+        <!-- Navigation -->
+        <nav aria-label="Main navigation">
 
             <a href="index.html">Home</a>
 
@@ -50,7 +66,7 @@
 
             <a href="programmes.html">Programmes</a>
 
-            <a href="enquiry.html">Enquiry</a>
+            <a href="enquiry.html" aria-current="page">Enquiry</a>
 
             <a href="contact.html">Contact</a>
 
@@ -58,25 +74,20 @@
 
     </header>
 
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             ENQUIRY INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- ENQUIRY INTRODUCTION -->
+        <section id="enquiry-introduction">
 
             <img
                 src="images/enquiry.jpg"
-                alt="Community enquiry and support"
-                width="300">
+                alt="Community members seeking information and social support"
+                width="300"
+                height="200"
+                loading="lazy"
+                decoding="async"
+            >
 
             <h2>Make an Enquiry</h2>
 
@@ -92,25 +103,20 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             ENQUIRY FORM
-             ================================================= -->
-
-        <section>
+        <!-- ENQUIRY FORM -->
+        <section id="enquiry-form-section">
 
             <h2>Enquiry Form</h2>
 
-            <form action="#" method="post">
+            <p>
+                Fields marked with an asterisk (*) are compulsory.
+            </p>
 
+            <form id="enquiryForm" action="#" method="post" novalidate>
 
-                <!-- =========================================
-                     FULL NAME
-                     ========================================= -->
-
+                <!-- FULL NAME -->
                 <label for="fullname">
-                    Full Name:
+                    Full Name: *
                 </label>
 
                 <br>
@@ -120,18 +126,17 @@
                     id="fullname"
                     name="fullname"
                     placeholder="Enter your full name"
-                    required>
+                    minlength="3"
+                    maxlength="60"
+                    autocomplete="name"
+                    required
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     EMAIL ADDRESS
-                     ========================================= -->
-
+                <!-- EMAIL -->
                 <label for="email">
-                    Email Address:
+                    Email Address: *
                 </label>
 
                 <br>
@@ -141,16 +146,13 @@
                     id="email"
                     name="email"
                     placeholder="Enter your email address"
-                    required>
+                    autocomplete="email"
+                    required
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     PHONE NUMBER
-                     ========================================= -->
-
+                <!-- PHONE -->
                 <label for="phone">
                     Phone Number:
                 </label>
@@ -161,18 +163,17 @@
                     type="tel"
                     id="phone"
                     name="phone"
-                    placeholder="Enter your phone number">
+                    placeholder="e.g. 0712345678"
+                    pattern="(?:\+27|0)[0-9]{9}"
+                    title="Enter a valid South African phone number."
+                    autocomplete="tel"
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     ENQUIRY TYPE
-                     ========================================= -->
-
+                <!-- ENQUIRY TYPE -->
                 <label for="enquiry-type">
-                    What is your enquiry about?
+                    What is your enquiry about? *
                 </label>
 
                 <br>
@@ -180,33 +181,34 @@
                 <select
                     id="enquiry-type"
                     name="enquiry-type"
-                    required>
+                    required
+                >
 
                     <option value="">
                         -- Select an option --
                     </option>
 
-                    <option value="social-support">
+                    <option value="Social Support">
                         Social Support
                     </option>
 
-                    <option value="family-support">
+                    <option value="Family Support">
                         Family Support
                     </option>
 
-                    <option value="youth-development">
+                    <option value="Youth Development">
                         Youth Development
                     </option>
 
-                    <option value="community-programmes">
+                    <option value="Community Programmes">
                         Community Programmes
                     </option>
 
-                    <option value="volunteering">
+                    <option value="Volunteering">
                         Volunteering
                     </option>
 
-                    <option value="general">
+                    <option value="General Enquiry">
                         General Enquiry
                     </option>
 
@@ -214,36 +216,40 @@
 
                 <br><br>
 
+                <!-- DYNAMIC RESPONSE -->
+                <div
+                    id="enquiry-information"
+                    role="status"
+                    aria-live="polite"
+                ></div>
 
+                <br>
 
-                <!-- =========================================
-                     PREFERRED CONTACT METHOD
-                     ========================================= -->
-
+                <!-- PREFERRED CONTACT METHOD -->
                 <fieldset>
 
                     <legend>
-                        Preferred Contact Method
+                        Preferred Contact Method: *
                     </legend>
-
 
                     <input
                         type="radio"
                         id="contact-email"
                         name="contact-method"
-                        value="email"
-                        required>
+                        value="Email"
+                        required
+                    >
 
                     <label for="contact-email">
                         Email
                     </label>
 
-
                     <input
                         type="radio"
                         id="contact-phone"
                         name="contact-method"
-                        value="phone">
+                        value="Phone"
+                    >
 
                     <label for="contact-phone">
                         Phone
@@ -253,14 +259,9 @@
 
                 <br>
 
-
-
-                <!-- =========================================
-                     MESSAGE
-                     ========================================= -->
-
+                <!-- MESSAGE -->
                 <label for="message">
-                    Tell Us How We Can Help:
+                    Tell Us How We Can Help: *
                 </label>
 
                 <br>
@@ -269,36 +270,40 @@
                     id="message"
                     name="message"
                     rows="7"
+                    minlength="10"
+                    maxlength="1000"
                     placeholder="Type your enquiry here..."
-                    required></textarea>
+                    required
+                ></textarea>
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     CONSENT CHECKBOX
-                     ========================================= -->
-
+                <!-- CONSENT -->
                 <input
                     type="checkbox"
                     id="consent"
                     name="consent"
-                    required>
+                    value="Yes"
+                    required
+                >
 
                 <label for="consent">
                     I confirm that the information I have provided
-                    is correct.
+                    is correct. *
                 </label>
 
                 <br><br>
 
+                <!-- FEEDBACK -->
+                <div
+                    id="enquiry-feedback"
+                    role="status"
+                    aria-live="polite"
+                ></div>
 
+                <br>
 
-                <!-- =========================================
-                     FORM BUTTONS
-                     ========================================= -->
-
+                <!-- BUTTONS -->
                 <button type="submit">
                     Submit Enquiry
                 </button>
@@ -307,18 +312,12 @@
                     Clear Form
                 </button>
 
-
             </form>
 
         </section>
 
-
-
-        <!-- =================================================
-             WHAT HAPPENS NEXT
-             ================================================= -->
-
-        <section>
+        <!-- WHAT HAPPENS NEXT -->
+        <section id="what-happens-next">
 
             <h2>What Happens Next?</h2>
 
@@ -335,32 +334,21 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             IMPORTANT NOTICE
-             ================================================= -->
-
-        <section>
+        <!-- IMPORTANT NOTICE -->
+        <section id="important-notice">
 
             <h2>Important Notice</h2>
 
             <p>
                 This enquiry form forms part of a student academic
-                website project. The form is currently for
-                demonstration purposes and does not send information
-                to the organisation.
+                website project. It currently demonstrates form
+                validation and confirmation functionality.
             </p>
 
         </section>
 
-
-
-        <!-- =================================================
-             CONTACT LINK
-             ================================================= -->
-
-        <section>
+        <!-- CONTACT LINK -->
+        <section id="contact-link">
 
             <h2>Looking for Contact Information?</h2>
 
@@ -374,23 +362,213 @@
 
         </section>
 
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
             &copy; 2026 A Re Ageng Social Services.
+            All rights reserved.
         </p>
 
     </footer>
 
+    <!-- JAVASCRIPT FUNCTIONALITY -->
+    <script>
+
+        // Select form elements
+        const enquiryForm = document.getElementById("enquiryForm");
+
+        const enquiryType = document.getElementById("enquiry-type");
+
+        const enquiryInformation =
+            document.getElementById("enquiry-information");
+
+        const enquiryFeedback =
+            document.getElementById("enquiry-feedback");
+
+
+        // Dynamic information based on enquiry selection
+        const enquiryResponses = {
+
+            "Social Support":
+                "Thank you for your interest in social support. Please describe the type of assistance you require.",
+
+            "Family Support":
+                "You have selected family support. Please provide information about the support or guidance you are seeking.",
+
+            "Youth Development":
+                "You have selected youth development. Please tell us whether you are interested in youth activities, development or educational opportunities.",
+
+            "Community Programmes":
+                "You have selected community programmes. Please specify which community initiatives you would like to know more about.",
+
+            "Volunteering":
+                "Thank you for your interest in volunteering. Please tell us about your skills and how you would like to contribute.",
+
+            "General Enquiry":
+                "Please provide details about your general enquiry so that it can be directed appropriately."
+
+        };
+
+
+        // Display dynamic content
+        enquiryType.addEventListener("change", function() {
+
+            const selectedValue = enquiryType.value;
+
+            enquiryInformation.textContent =
+                enquiryResponses[selectedValue] || "";
+
+        });
+
+
+        // Handle form submission
+        enquiryForm.addEventListener("submit", function(event) {
+
+            // Prevent default submission
+            event.preventDefault();
+
+            // Clear previous messages
+            enquiryFeedback.textContent = "";
+
+
+            // Collect form values
+            const fullname =
+                document.getElementById("fullname").value.trim();
+
+            const email =
+                document.getElementById("email").value.trim();
+
+            const phone =
+                document.getElementById("phone").value.trim();
+
+            const type =
+                enquiryType.value;
+
+            const message =
+                document.getElementById("message").value.trim();
+
+            const consent =
+                document.getElementById("consent").checked;
+
+            const preferredContact =
+                document.querySelector(
+                    'input[name="contact-method"]:checked'
+                );
+
+
+            // Validate full name
+            if (fullname.length < 3) {
+
+                enquiryFeedback.textContent =
+                    "Please enter your full name using at least 3 characters.";
+
+                return;
+
+            }
+
+
+            // Validate email
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                enquiryFeedback.textContent =
+                    "Please enter a valid email address.";
+
+                return;
+
+            }
+
+
+            // Validate phone number if provided
+            const phonePattern =
+                /^(?:\+27|0)[0-9]{9}$/;
+
+            if (phone !== "" && !phonePattern.test(phone)) {
+
+                enquiryFeedback.textContent =
+                    "Please enter a valid South African phone number.";
+
+                return;
+
+            }
+
+
+            // Validate enquiry selection
+            if (type === "") {
+
+                enquiryFeedback.textContent =
+                    "Please select an enquiry category.";
+
+                return;
+
+            }
+
+
+            // Validate preferred contact method
+            if (!preferredContact) {
+
+                enquiryFeedback.textContent =
+                    "Please select your preferred contact method.";
+
+                return;
+
+            }
+
+
+            // Validate message
+            if (message.length < 10) {
+
+                enquiryFeedback.textContent =
+                    "Your enquiry must contain at least 10 characters.";
+
+                return;
+
+            }
+
+
+            // Validate consent
+            if (!consent) {
+
+                enquiryFeedback.textContent =
+                    "Please confirm that your information is correct.";
+
+                return;
+
+            }
+
+
+            // Prepare a confirmation response
+            enquiryFeedback.textContent =
+                "Thank you, " + fullname +
+                "! Your " + type.toLowerCase() +
+                " enquiry has passed validation. Your preferred contact method is " +
+                preferredContact.value +
+                ". Please note that this is a demonstration and no information has been sent to the organisation.";
+
+            // Clear the form after successful validation
+            enquiryForm.reset();
+
+            // Clear dynamic information
+            enquiryInformation.textContent = "";
+
+        });
+
+
+        // Clear feedback when resetting the form
+        enquiryForm.addEventListener("reset", function() {
+
+            enquiryFeedback.textContent = "";
+
+            enquiryInformation.textContent = "";
+
+        });
+
+    </script>
 
 </body>
 
