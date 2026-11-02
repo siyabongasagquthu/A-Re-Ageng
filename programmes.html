@@ -1,46 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- Character encoding -->
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
 
-    <!-- Responsive design -->
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page description -->
+    <!-- SEO Description -->
     <meta name="description"
-        content="Discover community programmes and initiatives from A Re Ageng Social Services.">
+        content="Explore A Re Ageng Social Services community programmes, including youth development, family support, community awareness, outreach and volunteering.">
 
-    <!-- Page title -->
-    <title>A Re Ageng Social Services | Programmes</title>
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="community programmes, youth development, family support, community outreach, volunteering, A Re Ageng Social Services">
 
-    <!-- External Stylesheet -->
+    <!-- Author -->
+    <meta name="author" content="A Re Ageng Social Services">
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+        content="Community Programmes | A Re Ageng Social Services">
+
+    <meta property="og:description"
+        content="Discover proposed community programmes and initiatives supporting stronger communities.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Page Title -->
+    <title>Community Programmes | A Re Ageng Social Services</title>
+
+    <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
+    <!-- HEADER -->
     <header>
 
         <h1>A Re Ageng Social Services</h1>
 
         <p>Building Stronger Communities Together</p>
 
-
-        <!-- =================================================
-             NAVIGATION MENU
-             ================================================= -->
-
-        <nav>
+        <!-- Navigation -->
+        <nav aria-label="Main navigation">
 
             <a href="index.html">Home</a>
 
@@ -48,7 +64,7 @@
 
             <a href="services.html">Our Services</a>
 
-            <a href="programmes.html">Programmes</a>
+            <a href="programmes.html" aria-current="page">Programmes</a>
 
             <a href="enquiry.html">Enquiry</a>
 
@@ -58,26 +74,20 @@
 
     </header>
 
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- INTRODUCTION -->
+        <section id="programme-introduction">
 
             <img
                 src="images/programmes.jpg"
-                alt="Community programmes"
-                width="200"
-                height="200">
+                alt="Community members participating in community programmes"
+                width="400"
+                height="250"
+                loading="lazy"
+                decoding="async"
+            >
 
             <h2>Our Community Programmes</h2>
 
@@ -96,214 +106,210 @@
 
         </section>
 
+        <!-- PROGRAMME SEARCH AND FILTER -->
+        <section id="programme-search">
 
-
-        <!-- =================================================
-             PROGRAMME 1
-             ================================================= -->
-
-        <section>
-
-            <h2>Community Awareness</h2>
+            <h2>Find a Community Programme</h2>
 
             <p>
-                Community awareness activities can help residents
-                learn about important social issues, available
-                support services and resources within their
-                communities.
+                Search for a programme or select a category
+                to find information.
             </p>
 
-            <h3>Activities May Include:</h3>
+            <label for="programmeSearch">
+                Search Programmes:
+            </label>
 
-            <ul>
+            <br>
 
-                <li>
-                    Community information sessions
-                </li>
+            <input
+                type="search"
+                id="programmeSearch"
+                placeholder="Search programmes..."
+                aria-label="Search community programmes"
+            >
 
-                <li>
-                    Awareness campaigns
-                </li>
+            <br><br>
 
-                <li>
-                    Information sharing
-                </li>
+            <label for="programmeFilter">
+                Filter by Category:
+            </label>
 
-                <li>
-                    Community discussions
-                </li>
+            <br>
 
-            </ul>
+            <select id="programmeFilter">
+
+                <option value="all">All Programmes</option>
+
+                <option value="awareness">Community Awareness</option>
+
+                <option value="youth">Youth Development</option>
+
+                <option value="family">Family Support</option>
+
+                <option value="outreach">Community Outreach</option>
+
+                <option value="volunteering">Volunteering</option>
+
+            </select>
+
+            <p id="programmeCount" aria-live="polite">
+                Showing 5 programmes.
+            </p>
 
         </section>
 
+        <!-- PROGRAMME LIST -->
+        <section id="programme-list">
 
+            <!-- PROGRAMME 1 -->
+            <article class="programme-card" data-category="awareness">
 
-        <!-- =================================================
-             PROGRAMME 2
-             ================================================= -->
+                <h2>Community Awareness</h2>
 
-        <section>
+                <p>
+                    Community awareness activities can help residents
+                    learn about important social issues, available
+                    support services and resources within their
+                    communities.
+                </p>
 
-            <h2>Youth Development</h2>
+                <h3>Activities May Include:</h3>
 
-            <p>
-                Youth development programmes can provide young
-                people with opportunities to develop skills,
-                participate in community activities and learn
-                about available resources.
+                <ul>
+
+                    <li>Community information sessions</li>
+
+                    <li>Awareness campaigns</li>
+
+                    <li>Information sharing</li>
+
+                    <li>Community discussions</li>
+
+                </ul>
+
+            </article>
+
+            <!-- PROGRAMME 2 -->
+            <article class="programme-card" data-category="youth">
+
+                <h2>Youth Development</h2>
+
+                <p>
+                    Youth development programmes can provide young
+                    people with opportunities to develop skills,
+                    participate in community activities and learn
+                    about available resources.
+                </p>
+
+                <h3>Activities May Include:</h3>
+
+                <ul>
+
+                    <li>Skills development activities</li>
+
+                    <li>Youth awareness sessions</li>
+
+                    <li>Educational support</li>
+
+                    <li>Community participation</li>
+
+                </ul>
+
+            </article>
+
+            <!-- PROGRAMME 3 -->
+            <article class="programme-card" data-category="family">
+
+                <h2>Family Support Initiatives</h2>
+
+                <p>
+                    Family support initiatives can provide information,
+                    guidance and referrals to individuals and families
+                    experiencing challenges.
+                </p>
+
+                <h3>Activities May Include:</h3>
+
+                <ul>
+
+                    <li>Family support information</li>
+
+                    <li>Parenting information</li>
+
+                    <li>Support referrals</li>
+
+                    <li>Community resources</li>
+
+                </ul>
+
+            </article>
+
+            <!-- PROGRAMME 4 -->
+            <article class="programme-card" data-category="outreach">
+
+                <h2>Community Outreach</h2>
+
+                <p>
+                    Community outreach helps organisations engage
+                    directly with people and make information about
+                    available services easier to access.
+                </p>
+
+                <h3>Activities May Include:</h3>
+
+                <ul>
+
+                    <li>Community visits</li>
+
+                    <li>Information distribution</li>
+
+                    <li>Community engagement</li>
+
+                    <li>Support awareness</li>
+
+                </ul>
+
+            </article>
+
+            <!-- PROGRAMME 5 -->
+            <article class="programme-card" data-category="volunteering">
+
+                <h2>Volunteer Opportunities</h2>
+
+                <p>
+                    Volunteers can contribute their time and skills
+                    to support community initiatives and activities.
+                </p>
+
+                <h3>Volunteers May Help With:</h3>
+
+                <ul>
+
+                    <li>Community events</li>
+
+                    <li>Awareness campaigns</li>
+
+                    <li>Administrative assistance</li>
+
+                    <li>Community outreach</li>
+
+                </ul>
+
+            </article>
+
+            <!-- NO RESULTS MESSAGE -->
+            <p id="noProgrammeResults" hidden>
+
+                No programmes match your search.
+                Please try another search term or category.
+
             </p>
-
-            <h3>Activities May Include:</h3>
-
-            <ul>
-
-                <li>
-                    Skills development activities
-                </li>
-
-                <li>
-                    Youth awareness sessions
-                </li>
-
-                <li>
-                    Educational support
-                </li>
-
-                <li>
-                    Community participation
-                </li>
-
-            </ul>
 
         </section>
 
-
-
-        <!-- =================================================
-             PROGRAMME 3
-             ================================================= -->
-
-        <section>
-
-            <h2>Family Support Initiatives</h2>
-
-            <p>
-                Family support initiatives can provide information,
-                guidance and referrals to individuals and families
-                experiencing challenges.
-            </p>
-
-            <h3>Activities May Include:</h3>
-
-            <ul>
-
-                <li>
-                    Family support information
-                </li>
-
-                <li>
-                    Parenting information
-                </li>
-
-                <li>
-                    Support referrals
-                </li>
-
-                <li>
-                    Community resources
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROGRAMME 4
-             ================================================= -->
-
-        <section>
-
-            <h2>Community Outreach</h2>
-
-            <p>
-                Community outreach helps organisations engage
-                directly with people and make information about
-                available services easier to access.
-            </p>
-
-            <h3>Activities May Include:</h3>
-
-            <ul>
-
-                <li>
-                    Community visits
-                </li>
-
-                <li>
-                    Information distribution
-                </li>
-
-                <li>
-                    Community engagement
-                </li>
-
-                <li>
-                    Support awareness
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- =================================================
-             PROGRAMME 5
-             ================================================= -->
-
-        <section>
-
-            <h2>Volunteer Opportunities</h2>
-
-            <p>
-                Volunteers can contribute their time and skills
-                to support community initiatives and activities.
-            </p>
-
-            <h3>Volunteers May Help With:</h3>
-
-            <ul>
-
-                <li>
-                    Community events
-                </li>
-
-                <li>
-                    Awareness campaigns
-                </li>
-
-                <li>
-                    Administrative assistance
-                </li>
-
-                <li>
-                    Community outreach
-                </li>
-
-            </ul>
-
-        </section>
-
-
-
-        <!-- =================================================
-             GET INVOLVED
-             ================================================= -->
-
-        <section>
+        <!-- GET INVOLVED -->
+        <section id="get-involved">
 
             <h2>Get Involved</h2>
 
@@ -319,13 +325,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             IMPORTANT NOTICE
-             ================================================= -->
-
-        <section>
+        <!-- IMPORTANT INFORMATION -->
+        <section id="important-information">
 
             <h2>Important Information</h2>
 
@@ -339,23 +340,114 @@
 
         </section>
 
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
             &copy; 2026 A Re Ageng Social Services.
+            All rights reserved.
         </p>
 
     </footer>
 
+    <!-- JAVASCRIPT SEARCH AND FILTER -->
+    <script>
+
+        // Get search and filter elements
+        const programmeSearch =
+            document.getElementById("programmeSearch");
+
+        const programmeFilter =
+            document.getElementById("programmeFilter");
+
+        const programmeCards =
+            document.querySelectorAll(".programme-card");
+
+        const programmeCount =
+            document.getElementById("programmeCount");
+
+        const noProgrammeResults =
+            document.getElementById("noProgrammeResults");
+
+
+        // Search and filter programmes
+        function filterProgrammes() {
+
+            const searchValue =
+                programmeSearch.value.toLowerCase().trim();
+
+            const selectedCategory =
+                programmeFilter.value;
+
+            let visibleCount = 0;
+
+
+            // Loop through all programme cards
+            programmeCards.forEach(function(card) {
+
+                const programmeText =
+                    card.textContent.toLowerCase();
+
+                const category =
+                    card.dataset.category;
+
+                // Check search term
+                const matchesSearch =
+                    programmeText.includes(searchValue);
+
+                // Check selected category
+                const matchesCategory =
+                    selectedCategory === "all" ||
+                    category === selectedCategory;
+
+
+                // Display matching programmes
+                if (matchesSearch && matchesCategory) {
+
+                    card.hidden = false;
+
+                    visibleCount++;
+
+                } else {
+
+                    card.hidden = true;
+
+                }
+
+            });
+
+
+            // Update result count
+            programmeCount.textContent =
+                "Showing " + visibleCount +
+                " of " + programmeCards.length +
+                " programmes.";
+
+
+            // Display message when no results are found
+            noProgrammeResults.hidden =
+                visibleCount !== 0;
+
+        }
+
+
+        // Search when the user types
+        programmeSearch.addEventListener(
+            "input",
+            filterProgrammes
+        );
+
+
+        // Filter when a category is selected
+        programmeFilter.addEventListener(
+            "change",
+            filterProgrammes
+        );
+
+
+    </script>
 
 </body>
 
