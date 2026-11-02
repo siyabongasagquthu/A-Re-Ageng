@@ -1,46 +1,62 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- Character encoding -->
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
 
-    <!-- Responsive design -->
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page description -->
+    <!-- SEO Meta Description -->
     <meta name="description"
-        content="Contact A Re Ageng Social Services for information and assistance.">
+        content="Contact A Re Ageng Social Services in Randfontein, Gauteng. Send us a message for community support, social services and programme enquiries.">
 
-    <!-- Page title -->
-    <title>A Re Ageng Social Services | Contact</title>
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="Contact A Re Ageng, social services, community support, Randfontein, Gauteng">
+
+    <!-- Author -->
+    <meta name="author" content="A Re Ageng Social Services">
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title"
+        content="Contact Us | A Re Ageng Social Services">
+
+    <meta property="og:description"
+        content="Get in touch with A Re Ageng Social Services for information and community assistance.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Page Title -->
+    <title>Contact Us | A Re Ageng Social Services</title>
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
 </head>
 
-
 <body>
 
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
+    <!-- HEADER -->
     <header>
 
         <h1>A Re Ageng Social Services</h1>
 
         <p>Building Stronger Communities Together</p>
 
-
-        <!-- =================================================
-             NAVIGATION MENU
-             ================================================= -->
-
-        <nav>
+        <!-- Navigation Menu -->
+        <nav aria-label="Main navigation">
 
             <a href="index.html">Home</a>
 
@@ -52,26 +68,17 @@
 
             <a href="enquiry.html">Enquiry</a>
 
-            <a href="contact.html">Contact</a>
+            <a href="contact.html" aria-current="page">Contact</a>
 
         </nav>
 
     </header>
 
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             CONTACT INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- CONTACT INTRODUCTION -->
+        <section id="contact-introduction">
 
             <h2>Contact Us</h2>
 
@@ -83,18 +90,13 @@
 
             <p>
                 Please use the information below or complete the
-                contact form to get in touch.
+                contact form to get in touch with us.
             </p>
 
         </section>
 
-
-
-        <!-- =================================================
-             CONTACT INFORMATION
-             ================================================= -->
-
-        <section>
+        <!-- CONTACT INFORMATION -->
+        <section id="contact-information">
 
             <h2>Contact Information</h2>
 
@@ -104,13 +106,11 @@
                 A Re Ageng Social Services
             </p>
 
-
             <h3>Location</h3>
 
             <p>
                 Randfontein, Gauteng, South Africa
             </p>
-
 
             <h3>Telephone</h3>
 
@@ -118,7 +118,6 @@
                 Please contact the organisation directly for the
                 current telephone number.
             </p>
-
 
             <h3>Email</h3>
 
@@ -129,29 +128,28 @@
 
         </section>
 
+        <!-- CONTACT FORM -->
+        <section id="contact-form-section">
 
-
-        <!-- =================================================
-             CONTACT FORM
-             ================================================= -->
-
-        <section>
-
-            <img src="images/contact.jpg"
-                 alt="Contact A Re Ageng Social Services"
-                 width="400">
-
+            <img
+                src="images/contact.jpg"
+                alt="Contact A Re Ageng Social Services for community assistance"
+                width="400"
+                height="250"
+                loading="lazy"
+                decoding="async"
+            >
 
             <h2>Send Us a Message</h2>
 
+            <p>
+                Complete the form below and provide your contact
+                details so that we can respond to your enquiry.
+            </p>
 
-            <form action="#" method="post">
+            <form id="contactForm" action="#" method="post" novalidate>
 
-
-                <!-- =========================================
-                     FULL NAME
-                     ========================================= -->
-
+                <!-- FULL NAME -->
                 <label for="name">
                     Full Name:
                 </label>
@@ -163,16 +161,15 @@
                     id="name"
                     name="name"
                     placeholder="Enter your full name"
-                    required>
+                    minlength="3"
+                    maxlength="60"
+                    autocomplete="name"
+                    required
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     EMAIL ADDRESS
-                     ========================================= -->
-
+                <!-- EMAIL ADDRESS -->
                 <label for="email">
                     Email Address:
                 </label>
@@ -183,17 +180,14 @@
                     type="email"
                     id="email"
                     name="email"
-                    placeholder="Enter your email address"
-                    required>
+                    placeholder="example@email.com"
+                    autocomplete="email"
+                    required
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     PHONE NUMBER
-                     ========================================= -->
-
+                <!-- PHONE NUMBER -->
                 <label for="phone">
                     Phone Number:
                 </label>
@@ -204,37 +198,58 @@
                     type="tel"
                     id="phone"
                     name="phone"
-                    placeholder="Enter your phone number">
+                    placeholder="e.g. 0712345678 or +27712345678"
+                    pattern="(?:\+27|0)[0-9]{9}"
+                    title="Enter a valid South African telephone number."
+                    autocomplete="tel"
+                >
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     SUBJECT
-                     ========================================= -->
-
+                <!-- SUBJECT -->
                 <label for="subject">
                     Subject:
                 </label>
 
                 <br>
 
-                <input
-                    type="text"
+                <select
                     id="subject"
                     name="subject"
-                    placeholder="Enter the subject"
-                    required>
+                    required
+                >
+
+                    <option value="">Select a subject</option>
+
+                    <option value="General Enquiry">
+                        General Enquiry
+                    </option>
+
+                    <option value="Community Support">
+                        Community Support
+                    </option>
+
+                    <option value="Social Services">
+                        Social Services
+                    </option>
+
+                    <option value="Programmes">
+                        Programmes
+                    </option>
+
+                    <option value="Volunteering">
+                        Volunteering
+                    </option>
+
+                    <option value="Other">
+                        Other
+                    </option>
+
+                </select>
 
                 <br><br>
 
-
-
-                <!-- =========================================
-                     MESSAGE
-                     ========================================= -->
-
+                <!-- MESSAGE -->
                 <label for="message">
                     Message:
                 </label>
@@ -245,17 +260,24 @@
                     id="message"
                     name="message"
                     rows="7"
+                    minlength="10"
+                    maxlength="1000"
                     placeholder="Type your message here..."
-                    required></textarea>
+                    required
+                ></textarea>
 
                 <br><br>
 
+                <!-- ERROR AND SUCCESS MESSAGES -->
+                <div
+                    id="formFeedback"
+                    role="status"
+                    aria-live="polite"
+                ></div>
 
+                <br>
 
-                <!-- =========================================
-                     FORM BUTTONS
-                     ========================================= -->
-
+                <!-- FORM BUTTONS -->
                 <button type="submit">
                     Send Message
                 </button>
@@ -264,33 +286,29 @@
                     Clear Form
                 </button>
 
-
             </form>
 
         </section>
 
-
-
-        <!-- =================================================
-             OFFICE HOURS
-             ================================================= -->
-
-        <section>
+        <!-- OFFICE HOURS -->
+        <section id="office-hours">
 
             <h2>Office Hours</h2>
 
-
             <table>
+
+                <caption>
+                    A Re Ageng Social Services office hours
+                </caption>
 
                 <thead>
 
                     <tr>
-                        <th>Day</th>
-                        <th>Opening Hours</th>
+                        <th scope="col">Day</th>
+                        <th scope="col">Opening Hours</th>
                     </tr>
 
                 </thead>
-
 
                 <tbody>
 
@@ -335,13 +353,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             IMPORTANT NOTICE
-             ================================================= -->
-
-        <section>
+        <!-- IMPORTANT NOTICE -->
+        <section id="important-notice">
 
             <h2>Important Notice</h2>
 
@@ -353,23 +366,167 @@
 
         </section>
 
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
             &copy; 2026 A Re Ageng Social Services.
+            All rights reserved.
         </p>
 
     </footer>
 
+    <!-- JAVASCRIPT FORM VALIDATION -->
+    <script>
+
+        // Select the contact form
+        const contactForm = document.getElementById("contactForm");
+
+        // Select the feedback area
+        const formFeedback = document.getElementById("formFeedback");
+
+        // Organisation email address
+        // Replace this placeholder with the real email address.
+        const CONTACT_EMAIL = "REPLACE-WITH-ORGANISATION-EMAIL@example.com";
+
+
+        // Handle form submission
+        contactForm.addEventListener("submit", function(event) {
+
+            // Prevent default form submission
+            event.preventDefault();
+
+            // Get form values
+            const name = document.getElementById("name").value.trim();
+
+            const email = document.getElementById("email").value.trim();
+
+            const phone = document.getElementById("phone").value.trim();
+
+            const subject = document.getElementById("subject").value;
+
+            const message = document.getElementById("message").value.trim();
+
+
+            // Clear previous feedback
+            formFeedback.textContent = "";
+
+
+            // Check whether required fields are completed
+            if (name === "" || email === "" || subject === "" || message === "") {
+
+                formFeedback.textContent =
+                    "Please complete all required fields.";
+
+                return;
+
+            }
+
+
+            // Validate full name
+            if (name.length < 3) {
+
+                formFeedback.textContent =
+                    "Your name must contain at least 3 characters.";
+
+                return;
+
+            }
+
+
+            // Validate email address
+            const emailPattern =
+                /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+            if (!emailPattern.test(email)) {
+
+                formFeedback.textContent =
+                    "Please enter a valid email address.";
+
+                return;
+
+            }
+
+
+            // Validate phone number if provided
+            const phonePattern =
+                /^(?:\+27|0)[0-9]{9}$/;
+
+            if (phone !== "" && !phonePattern.test(phone)) {
+
+                formFeedback.textContent =
+                    "Please enter a valid South African phone number.";
+
+                return;
+
+            }
+
+
+            // Validate message length
+            if (message.length < 10) {
+
+                formFeedback.textContent =
+                    "Your message must contain at least 10 characters.";
+
+                return;
+
+            }
+
+
+            // Check whether the organisation email was configured
+            if (CONTACT_EMAIL ===
+                "REPLACE-WITH-ORGANISATION-EMAIL@example.com") {
+
+                formFeedback.textContent =
+                    "Your information is valid. The organisation's email address must be configured before sending.";
+
+                return;
+
+            }
+
+
+            // Prepare email content
+            const emailSubject =
+                encodeURIComponent(subject);
+
+            const emailBody =
+                encodeURIComponent(
+                    "Contact Form Submission\n\n" +
+                    "Full Name: " + name + "\n" +
+                    "Email Address: " + email + "\n" +
+                    "Phone Number: " + (phone || "Not provided") + "\n" +
+                    "Subject: " + subject + "\n\n" +
+                    "Message:\n" + message
+                );
+
+
+            // Create email link
+            const mailtoLink =
+                "mailto:" + CONTACT_EMAIL +
+                "?subject=" + emailSubject +
+                "&body=" + emailBody;
+
+
+            // Display confirmation
+            formFeedback.textContent =
+                "Your information is valid. Opening your email application...";
+
+            // Open the visitor's default email application
+            window.location.href = mailtoLink;
+
+        });
+
+
+        // Clear feedback when the form is reset
+        contactForm.addEventListener("reset", function() {
+
+            formFeedback.textContent = "";
+
+        });
+
+    </script>
 
 </body>
 
