@@ -1,38 +1,73 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
 
-    <!-- Character encoding -->
+    <!-- Character Encoding -->
     <meta charset="UTF-8">
 
-    <!-- Responsive design -->
+    <!-- Responsive Design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Website description -->
+    <!-- SEO Description -->
     <meta name="description"
-        content="A Re Ageng Social Services - Supporting individuals, families and communities through social services and community programmes.">
+        content="Welcome to A Re Ageng Social Services. Discover our community support services, family assistance, youth development and community programmes in South Africa.">
 
-    <!-- Website title -->
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="A Re Ageng Social Services, social services, community support, family support, youth development, community programmes, South Africa">
+
+    <!-- Author -->
+    <meta name="author" content="A Re Ageng Social Services">
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title"
+        content="A Re Ageng Social Services | Building Stronger Communities">
+
+    <meta property="og:description"
+        content="Supporting individuals, families and communities through accessible social services and community programmes.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Page Title -->
     <title>A Re Ageng Social Services | Home</title>
 
     <!-- External Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
 
-</head>
+    <!-- Organisation Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "A Re Ageng Social Services",
+        "description": "A community-focused organisation supporting individuals, families and communities through social services and community programmes.",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Randfontein",
+            "addressRegion": "Gauteng",
+            "addressCountry": "ZA"
+        }
+    }
+    </script>
 
+</head>
 
 <body>
 
+    <!-- Skip Navigation -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
+    <!-- HEADER -->
     <header>
 
-        <!-- Organisation Name -->
-
+        <!-- Organisation Branding -->
         <div class="header-brand">
 
             <div>
@@ -45,14 +80,10 @@
 
         </div>
 
+        <!-- Navigation Menu -->
+        <nav aria-label="Main navigation">
 
-        <!-- =================================================
-             NAVIGATION MENU
-             ================================================= -->
-
-        <nav>
-
-            <a href="index.html">Home</a>
+            <a href="index.html" aria-current="page">Home</a>
 
             <a href="about.html">About Us</a>
 
@@ -68,31 +99,24 @@
 
     </header>
 
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             HERO SECTION
-             ================================================= -->
-
+        <!-- HERO SECTION -->
         <section id="home">
 
             <img
                 src="images/index.jpg"
-                alt="Community members working together"
-                width="400">
-
+                alt="Community members working together to strengthen their community"
+                width="400"
+                height="250"
+                fetchpriority="high"
+                decoding="async"
+            >
 
             <h2>
                 Supporting People. Strengthening Communities.
             </h2>
-
 
             <p>
                 Welcome to A Re Ageng Social Services.
@@ -101,31 +125,22 @@
                 and community-focused programmes.
             </p>
 
-
             <p>
                 We believe that stronger communities are created when
                 people have access to support, information and opportunities.
             </p>
 
-
             <!-- Call to Action -->
-
             <a href="services.html" class="cta-button">
                 Learn About Our Services
             </a>
 
         </section>
 
-
-
-        <!-- =================================================
-             ABOUT INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- ABOUT INTRODUCTION -->
+        <section id="about-introduction">
 
             <h2>Who We Are</h2>
-
 
             <p>
                 A Re Ageng Social Services is a community-focused
@@ -133,13 +148,11 @@
                 who need assistance and guidance.
             </p>
 
-
             <p>
-                Our proposed website will provide the community with
-                an easy way to learn about our organisation, understand
-                the services available and contact us for assistance.
+                Our website provides the community with an easy way
+                to learn about our organisation, understand the
+                services available and contact us for assistance.
             </p>
-
 
             <a href="about.html" class="cta-button">
                 Learn More About Us
@@ -147,27 +160,18 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             SERVICES INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- SERVICES INTRODUCTION -->
+        <section id="services-introduction">
 
             <h2>Our Services</h2>
-
 
             <p>
                 Our services are designed to support individuals,
                 families and members of the community.
             </p>
 
-
-
             <!-- Service 1 -->
-
-            <article>
+            <article class="service-card">
 
                 <h3>Social Support</h3>
 
@@ -178,11 +182,8 @@
 
             </article>
 
-
-
             <!-- Service 2 -->
-
-            <article>
+            <article class="service-card">
 
                 <h3>Community Support</h3>
 
@@ -193,11 +194,8 @@
 
             </article>
 
-
-
             <!-- Service 3 -->
-
-            <article>
+            <article class="service-card">
 
                 <h3>Information and Guidance</h3>
 
@@ -208,23 +206,16 @@
 
             </article>
 
-
             <a href="services.html" class="cta-button">
                 View All Services
             </a>
 
         </section>
 
-
-
-        <!-- =================================================
-             COMMUNITY PROGRAMMES
-             ================================================= -->
-
-        <section>
+        <!-- COMMUNITY PROGRAMMES -->
+        <section id="community-programmes">
 
             <h2>Community Programmes</h2>
-
 
             <p>
                 Community programmes can help people access support,
@@ -232,27 +223,17 @@
                 contribute to stronger communities.
             </p>
 
-
             <ul>
 
-                <li>
-                    Community awareness programmes
-                </li>
+                <li>Community awareness programmes</li>
 
-                <li>
-                    Family support initiatives
-                </li>
+                <li>Family support initiatives</li>
 
-                <li>
-                    Youth development activities
-                </li>
+                <li>Youth development activities</li>
 
-                <li>
-                    Community outreach
-                </li>
+                <li>Community outreach</li>
 
             </ul>
-
 
             <a href="programmes.html" class="cta-button">
                 Explore Our Programmes
@@ -260,22 +241,15 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             GET INVOLVED
-             ================================================= -->
-
-        <section>
+        <!-- GET INVOLVED -->
+        <section id="get-involved">
 
             <h2>Get Involved</h2>
-
 
             <p>
                 Community organisations depend on people who are
                 willing to support positive change.
             </p>
-
 
             <p>
                 Members of the community can get involved by
@@ -283,29 +257,21 @@
                 contacting the organisation to learn more.
             </p>
 
-
             <a href="enquiry.html" class="cta-button">
                 Get Involved
             </a>
 
         </section>
 
-
-
-        <!-- =================================================
-             CONTACT INTRODUCTION
-             ================================================= -->
-
-        <section>
+        <!-- CONTACT INTRODUCTION -->
+        <section id="contact-introduction">
 
             <h2>Need Assistance?</h2>
-
 
             <p>
                 If you would like more information about our services
                 or programmes, please contact us.
             </p>
-
 
             <a href="contact.html" class="cta-button">
                 Contact Us
@@ -313,23 +279,17 @@
 
         </section>
 
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
             &copy; 2026 A Re Ageng Social Services.
+            All rights reserved.
         </p>
 
     </footer>
-
 
 </body>
 
