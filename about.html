@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,42 +10,67 @@
     <!-- Responsive design -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Page description -->
+    <!-- SEO Meta Description -->
     <meta name="description"
-        content="Learn more about A Re Ageng Social Services, our mission, vision and values.">
+        content="Discover A Re Ageng Social Services, our mission, vision and values. Learn how we support individuals, families and communities across South Africa.">
 
-    <!-- Page title -->
-    <title>A Re Ageng Social Services | About Us</title>
+    <!-- SEO Keywords -->
+    <meta name="keywords"
+        content="A Re Ageng Social Services, community support, social services, family support, community programmes, South Africa">
+
+    <!-- Author -->
+    <meta name="author" content="A Re Ageng Social Services">
+
+    <!-- Search Engine Indexing -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Open Graph Metadata -->
+    <meta property="og:title"
+        content="About Us | A Re Ageng Social Services">
+
+    <meta property="og:description"
+        content="Learn about our mission, vision and commitment to building stronger communities.">
+
+    <meta property="og:type" content="website">
+
+    <!-- Page Title -->
+    <title>About Us | A Re Ageng Social Services</title>
 
     <!-- External CSS -->
     <link rel="stylesheet" href="css/style.css">
 
-</head>
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "NGO",
+        "name": "A Re Ageng Social Services",
+        "description": "A community-focused organisation supporting individuals, families and communities in South Africa."
+    }
+    </script>
 
+</head>
 
 <body>
 
+    <!-- Skip Navigation Link -->
+    <a href="#main-content" class="skip-link">
+        Skip to main content
+    </a>
 
-    <!-- =====================================================
-         HEADER
-         ===================================================== -->
-
+    <!-- HEADER -->
     <header>
 
         <h1>A Re Ageng Social Services</h1>
 
         <p>Building Stronger Communities Together</p>
 
-
-        <!-- =================================================
-             NAVIGATION MENU
-             ================================================= -->
-
-        <nav>
+        <!-- Navigation -->
+        <nav aria-label="Main navigation">
 
             <a href="index.html">Home</a>
 
-            <a href="about.html">About Us</a>
+            <a href="about.html" aria-current="page">About Us</a>
 
             <a href="services.html">Our Services</a>
 
@@ -58,20 +84,11 @@
 
     </header>
 
+    <!-- MAIN CONTENT -->
+    <main id="main-content">
 
-
-    <!-- =====================================================
-         MAIN CONTENT
-         ===================================================== -->
-
-    <main>
-
-
-        <!-- =================================================
-             ABOUT US
-             ================================================= -->
-
-        <section>
+        <!-- ABOUT US -->
+        <section id="about">
 
             <h2>About A Re Ageng Social Services</h2>
 
@@ -80,14 +97,15 @@
                 organisation based in South Africa.
             </p>
 
-
             <!-- About Us Image -->
-
-            <img src="images/about.jpg"
-                 alt="Community support"
-                 width="200"
-                 height="200">
-
+            <img
+                src="images/about.jpg"
+                alt="Community members participating in a social support initiative"
+                width="200"
+                height="200"
+                loading="lazy"
+                decoding="async"
+            >
 
             <p>
                 The organisation aims to provide support, guidance
@@ -96,20 +114,15 @@
             </p>
 
             <p>
-                The purpose of this proposed website is to make
-                information about the organisation easier for
-                members of the community to access.
+                The purpose of this website is to make information
+                about the organisation easier for members of the
+                community to access.
             </p>
 
         </section>
 
-
-
-        <!-- =================================================
-             OUR MISSION
-             ================================================= -->
-
-        <section>
+        <!-- OUR MISSION -->
+        <section id="mission">
 
             <h2>Our Mission</h2>
 
@@ -122,13 +135,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             OUR VISION
-             ================================================= -->
-
-        <section>
+        <!-- OUR VISION -->
+        <section id="vision">
 
             <h2>Our Vision</h2>
 
@@ -141,13 +149,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             OUR VALUES
-             ================================================= -->
-
-        <section>
+        <!-- OUR VALUES -->
+        <section id="values">
 
             <h2>Our Values</h2>
 
@@ -155,7 +158,6 @@
                 Our work is based on values that encourage respect,
                 dignity, equality and community participation.
             </p>
-
 
             <ul>
 
@@ -190,13 +192,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             WHY WE EXIST
-             ================================================= -->
-
-        <section>
+        <!-- WHY WE EXIST -->
+        <section id="why-we-exist">
 
             <h2>Why We Exist</h2>
 
@@ -215,13 +212,8 @@
 
         </section>
 
-
-
-        <!-- =================================================
-             CALL TO ACTION
-             ================================================= -->
-
-        <section>
+        <!-- CALL TO ACTION -->
+        <section id="learn-more">
 
             <h2>Learn More About Our Services</h2>
 
@@ -236,24 +228,17 @@
 
         </section>
 
-
     </main>
 
-
-
-    <!-- =====================================================
-         FOOTER
-         ===================================================== -->
-
+    <!-- FOOTER -->
     <footer>
 
         <p>
             &copy; 2026 A Re Ageng Social Services.
+            All rights reserved.
         </p>
 
     </footer>
 
-
 </body>
-
 </html>
